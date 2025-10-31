@@ -1,0 +1,164 @@
+<!-- Creative CV Website - HTML/CSS/JS Version -->
+<!-- Tailwind CDN version for quick deployment. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonukrishna P — Creative CV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background: linear-gradient(to bottom right, #0f172a, #111827, #1e1b4b); }
+  </style>
+</head>
+<body class="text-gray-100 font-sans">
+  <header class="max-w-5xl mx-auto p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-4">
+      <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-pink-500 to-yellow-400 flex items-center justify-center shadow-lg">
+        <span class="font-bold text-lg text-slate-900">SK</span>
+      </div>
+      <div>
+        <h1 class="text-2xl font-semibold">Sonukrishna P</h1>
+        <p class="text-sm text-slate-300">AIML Student • Full‑stack dev • Photographer</p>
+      </div>
+    </div>
+
+    <nav class="flex gap-3 text-sm">
+      <a href="#about" class="hover:text-pink-400">About</a>
+      <a href="#skills" class="hover:text-pink-400">Skills</a>
+      <a href="#projects" class="hover:text-pink-400">Projects</a>
+      <a href="#contact" class="hover:text-pink-400">Contact</a>
+    </nav>
+
+    <a href="resume.pdf" download class="px-4 py-2 rounded-lg bg-gradient-to-r from-pink-500 to-yellow-400 text-slate-900 font-semibold shadow hover:scale-105 transition-transform">Download CV</a>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Left Side: About Section -->
+    <section id="about" class="md:col-span-2 bg-white/5 rounded-2xl p-6 backdrop-blur-sm shadow-inner">
+      <div class="flex flex-col md:flex-row gap-6 items-start">
+        <img src="me.jpeg" alt="profile" class="w-36 h-36 rounded-2xl object-cover shadow-lg border-2 border-white/10" />
+        <div>
+          <h2 class="text-3xl font-bold">Hi — I’m Sonukrishna</h2>
+          <p class="mt-3 text-slate-200 leading-relaxed">I’m an AIML engineering student from Kannur, Kerala. I build data-driven applications and love turning messy data into clear decisions. I also enjoy photography and game design in my free time.</p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <span class="text-sm px-3 py-1 rounded-full bg-white/10">Python</span>
+            <span class="text-sm px-3 py-1 rounded-full bg-white/10">Machine Learning</span>
+            <span class="text-sm px-3 py-1 rounded-full bg-white/10">React</span>
+            <span class="text-sm px-3 py-1 rounded-full bg-white/10">NLP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-4 rounded-lg bg-white/5">
+          <h4 class="font-semibold">Education</h4>
+          <p class="text-sm text-slate-300 mt-2">B.Tech — SUIET</p>
+        </div>
+        <div class="p-4 rounded-lg bg-white/5">
+          <h4 class="font-semibold">Location</h4>
+          <p class="text-sm text-slate-300 mt-2">Kannur, Kerala</p>
+        </div>
+        <div class="p-4 rounded-lg bg-white/5">
+          <h4 class="font-semibold">Availability</h4>
+          <p class="text-sm text-slate-300 mt-2">Open to internships & collaboration</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Side: Skills and Contact -->
+    <aside class="flex flex-col gap-6">
+      <div id="skills" class="p-6 rounded-2xl bg-white/6">
+        <h3 class="text-lg font-semibold mb-4">Skills</h3>
+        <div id="skillsList" class="space-y-4"></div>
+      </div>
+
+      <div id="projects" class="p-6 rounded-2xl bg-white/6">
+        <h3 class="text-lg font-semibold mb-4">Projects</h3>
+        <div id="projectList" class="space-y-4"></div>
+      </div>
+
+      <div id="contact" class="p-6 rounded-2xl bg-gradient-to-tr from-indigo-700/30 to-slate-800/30">
+        <h3 class="text-lg font-semibold">Contact</h3>
+        <p class="text-sm text-slate-300 mt-2">I'm Sonukrishna — reach out for collaborations, internships, or quick chats.</p>
+        <form id="contactForm" class="mt-4 space-y-3">
+          <input type="text" placeholder="Your name" class="w-full p-2 rounded bg-white/5 text-sm" required />
+          <input type="email" placeholder="Your email" class="w-full p-2 rounded bg-white/5 text-sm" required />
+          <textarea placeholder="Message" class="w-full p-2 rounded bg-white/5 text-sm h-24" required></textarea>
+          <button type="submit" class="px-4 py-2 rounded bg-gradient-to-r from-pink-500 to-yellow-400 text-slate-900 font-semibold">Send</button>
+        </form>
+        <div class="mt-4 flex gap-3 text-sm text-slate-300">
+          <a href="#" class="hover:underline">GitHub</a>
+          <a href="#" class="hover:underline">LinkedIn</a>
+          <a href="#" class="hover:underline">Portfolio</a>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="mt-12 py-8 border-t border-white/5 text-center text-slate-400 text-sm">
+    © <span id="year"></span> Sonukrishna — All rights reserved.
+  </footer>
+
+  <svg class="pointer-events-none fixed right-0 bottom-0 w-72 opacity-20" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="g1" x1="0" x2="1">
+        <stop offset="0%" stop-color="#f0abfc" />
+        <stop offset="100%" stop-color="#fef08a" />
+      </linearGradient>
+    </defs>
+    <g transform="translate(300,300)">
+      <path d="M120,-160C160,-120,180,-60,170,0C160,60,120,120,60,150C0,180,-60,180,-110,150C-160,120,-200,60,-190,10C-180,-40,-120,-80,-80,-120C-40,-160,0,-200,40,-200C80,-200,120,-180,120,-160Z" fill="url(#g1)" />
+    </g>
+  </svg>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const skills = [
+      { name: 'JavaScript', level: 90 },
+      { name: 'React', level: 88 },
+      { name: 'Node.js', level: 80 },
+      { name: 'Python', level: 75 },
+      { name: 'Machine Learning', level: 70 }
+    ];
+
+    const projects = [
+      { title: 'Spotify Genre Segmentation', desc: 'A music clustering project that groups songs by audio features and user preferences.', link: '#' },
+      { title: 'Cardio Vascular Disease Predictor', desc: 'A classification model that predicts heart disease risk using clinical features.', link: '#' },
+      { title: 'Personal Portfolio', desc: 'Responsive website showcasing projects, blog posts, and photography.', link: '#' }
+    ];
+
+    const skillsList = document.getElementById('skillsList');
+    skills.forEach(s => {
+      const div = document.createElement('div');
+      div.innerHTML = `
+        <div class='flex justify-between text-sm text-slate-300'>
+          <span>${s.name}</span>
+          <span>${s.level}%</span>
+        </div>
+        <div class='w-full h-2 bg-white/10 rounded-full mt-2 overflow-hidden'>
+          <div class='h-2 rounded-full bg-gradient-to-r from-pink-500 to-yellow-400' style='width:${s.level}%'></div>
+        </div>`;
+      skillsList.appendChild(div);
+    });
+
+    const projectList = document.getElementById('projectList');
+    projects.forEach(p => {
+      const article = document.createElement('article');
+      article.className = 'p-3 rounded-lg bg-white/5 hover:bg-white/4 transition';
+      article.innerHTML = `
+        <h4 class='font-semibold'>${p.title}</h4>
+        <p class='text-sm text-slate-300 mt-1'>${p.desc}</p>
+        <a href='${p.link}' class='text-sm underline mt-1 inline-block'>View</a>`;
+      projectList.appendChild(article);
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Message sent! (demo only)');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
